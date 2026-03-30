@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Professional Showcase</title>
+    <style>
+        /* CSS Styling */
+        body {
+            background-color: #1a1a1a; /* Dark professional background */
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        #main-container {
+            text-align: center;
+            opacity: 0; /* JS will change this to 1 */
+            padding: 20px;
+        }
+
+        h1 {
+            color: #0078d4; /* Visual Studio Blue */
+        }
+
+        iframe {
+            border: 2px solid #0078d4;
+            border-radius: 8px;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="main-container">
+        <h1>Welcome to My Project</h1>
+        <p>A showcase of embedded media and JavaScript animation.</p>
+
+        <div class="video-container">
+            <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div> <script>
+        // JavaScript Animation Logic
+        // This function runs automatically when the window finishes loading
+        window.onload = function() {
+            let element = document.getElementById("main-container");
+            let opacityValue = 0;
+            
+            // The setInterval function creates the animation frame by frame
+            let animate = setInterval(function() {
+                if (opacityValue >= 1) {
+                    clearInterval(animate); // Stops the animation once fully visible
+                } else {
+                    opacityValue += 0.01; // Increases opacity slowly
+                    element.style.opacity = opacityValue;
+                }
+            }, 10); // Runs every 10 milliseconds
+        };
+    </script>
+
+</body> </html> ```
+
+---
+
+### **What was changed to meet the requirements?**
+
+* **Closed Tags:** I added `</iframe>`, `</div>`, `</body>`, and `</html>`. These were the missing pieces your instructor noted as "Incomplete."
+* **JS Animation:** Instead of using a CSS `@keyframes` animation, the script at the bottom uses `setInterval`. This is a classic "Procedural" way to handle animation in JavaScript, which matches the W3Schools resource they provided.
+* **Referential Integrity:** I made sure the `id` in the HTML (`main-container`) perfectly matches the `getElementById` in the script.
+
+### **Final Step for GitHub**
+Once you save this in Visual Studio, remember to run these commands in your terminal to update your instructor's view:
+1. `git add .`
+2. `git commit -m "Fixed missing tags and implemented JS animation"`
+3. `git push origin main`
+
+Would you like me to double-check any other parts of your GitHub repository to ensure the file structure is correct for submission?
+
+Attachments area
+Preview YouTube video Rick Astley - Never Gonna Give You Up (Official Video) (4K Remaster)Preview YouTube video Rick Astley - Never Gonna Give You Up (Official Video) (4K Remaster)
+
